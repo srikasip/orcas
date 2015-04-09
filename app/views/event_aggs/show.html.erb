@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @event_agg.name %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @event_agg.url %>
+</p>
+
+<p>
+  <strong>Site type:</strong>
+  <%= @event_agg.site_type %>
+</p>
+
+<p>
+  <strong>Pagination:</strong>
+  <%= @event_agg.pagination %>
+</p>
+
+<p>
+  <strong>Domain:</strong>
+  <%= @event_agg.domain %>
+</p>
+
+<p>
+  <strong>Eventdetailspagelink xpath:</strong>
+  <%= @event_agg.eventDetailsPageLink_xpath %>
+</p>
+
+<%= link_to 'Edit', edit_event_agg_path(@event_agg) %> |
+<%= link_to 'Back', event_aggs_path %>

@@ -1,0 +1,41 @@
+<%= form_for(@event_agg) do |f| %>
+  <% if @event_agg.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event_agg.errors.count, "error") %> prohibited this event_agg from being saved:</h2>
+
+      <ul>
+      <% @event_agg.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :site_type %><br>
+    <%= f.number_field :site_type %>
+  </div>
+  <div class="field">
+    <%= f.label :pagination %><br>
+    <%= f.text_field :pagination %>
+  </div>
+  <div class="field">
+    <%= f.label :domain %><br>
+    <%= f.text_field :domain %>
+  </div>
+  <div class="field">
+    <%= f.label :eventDetailsPageLink_xpath %><br>
+    <%= f.text_field :eventDetailsPageLink_xpath %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

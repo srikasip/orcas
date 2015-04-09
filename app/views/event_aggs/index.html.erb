@@ -1,0 +1,37 @@
+<h1>Listing event_aggs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Url</th>
+      <th>Site type</th>
+      <th>Pagination</th>
+      <th>Domain</th>
+      <th>Eventdetailspagelink xpath</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @event_aggs.each do |event_agg| %>
+      <tr>
+        <td><%= event_agg.name %></td>
+        <td><%= event_agg.url %></td>
+        <td><%= event_agg.site_type %></td>
+        <td><%= event_agg.pagination %></td>
+        <td><%= event_agg.domain %></td>
+        <td><%= event_agg.eventDetailsPageLink_xpath %></td>
+        <td><%= link_to 'Show', event_agg %></td>
+        <td><%= link_to 'Edit', edit_event_agg_path(event_agg) %></td>
+        <td><%= link_to 'Destroy', event_agg, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Event agg', new_event_agg_path %>
