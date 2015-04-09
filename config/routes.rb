@@ -1,4 +1,6 @@
 SuperScraper::Application.routes.draw do
+  resources :events_parsers
+
   resources :event_aggs
 
   # The priority is based upon order of creation: first created -> highest priority.

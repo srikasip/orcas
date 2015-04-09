@@ -1,0 +1,37 @@
+<h1>Listing events_parsers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Eventname xpath</th>
+      <th>Eventlocation xpath</th>
+      <th>Eventdatetime xpath</th>
+      <th>Eventdescription xpath</th>
+      <th>Eventprice xpath</th>
+      <th>Eventimage xpath</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @events_parsers.each do |events_parser| %>
+      <tr>
+        <td><%= events_parser.eventName_xpath %></td>
+        <td><%= events_parser.eventLocation_xpath %></td>
+        <td><%= events_parser.eventDateTime_xpath %></td>
+        <td><%= events_parser.eventDescription_xpath %></td>
+        <td><%= events_parser.eventPrice_xpath %></td>
+        <td><%= events_parser.eventImage_xpath %></td>
+        <td><%= link_to 'Show', events_parser %></td>
+        <td><%= link_to 'Edit', edit_events_parser_path(events_parser) %></td>
+        <td><%= link_to 'Destroy', events_parser, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Events parser', new_events_parser_path %>

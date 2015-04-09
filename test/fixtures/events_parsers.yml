@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  eventName_xpath: MyText
+  eventLocation_xpath: MyText
+  eventDateTime_xpath: MyText
+  eventDescription_xpath: MyText
+  eventPrice_xpath: MyText
+  eventImage_xpath: MyText
+
+two:
+  eventName_xpath: MyText
+  eventLocation_xpath: MyText
+  eventDateTime_xpath: MyText
+  eventDescription_xpath: MyText
+  eventPrice_xpath: MyText
+  eventImage_xpath: MyText

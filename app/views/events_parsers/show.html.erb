@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Eventname xpath:</strong>
+  <%= @events_parser.eventName_xpath %>
+</p>
+
+<p>
+  <strong>Eventlocation xpath:</strong>
+  <%= @events_parser.eventLocation_xpath %>
+</p>
+
+<p>
+  <strong>Eventdatetime xpath:</strong>
+  <%= @events_parser.eventDateTime_xpath %>
+</p>
+
+<p>
+  <strong>Eventdescription xpath:</strong>
+  <%= @events_parser.eventDescription_xpath %>
+</p>
+
+<p>
+  <strong>Eventprice xpath:</strong>
+  <%= @events_parser.eventPrice_xpath %>
+</p>
+
+<p>
+  <strong>Eventimage xpath:</strong>
+  <%= @events_parser.eventImage_xpath %>
+</p>
+
+<%= link_to 'Edit', edit_events_parser_path(@events_parser) %> |
+<%= link_to 'Back', events_parsers_path %>

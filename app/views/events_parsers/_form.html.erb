@@ -1,0 +1,41 @@
+<%= form_for(@events_parser) do |f| %>
+  <% if @events_parser.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@events_parser.errors.count, "error") %> prohibited this events_parser from being saved:</h2>
+
+      <ul>
+      <% @events_parser.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :eventName_xpath %><br>
+    <%= f.text_area :eventName_xpath %>
+  </div>
+  <div class="field">
+    <%= f.label :eventLocation_xpath %><br>
+    <%= f.text_area :eventLocation_xpath %>
+  </div>
+  <div class="field">
+    <%= f.label :eventDateTime_xpath %><br>
+    <%= f.text_area :eventDateTime_xpath %>
+  </div>
+  <div class="field">
+    <%= f.label :eventDescription_xpath %><br>
+    <%= f.text_area :eventDescription_xpath %>
+  </div>
+  <div class="field">
+    <%= f.label :eventPrice_xpath %><br>
+    <%= f.text_area :eventPrice_xpath %>
+  </div>
+  <div class="field">
+    <%= f.label :eventImage_xpath %><br>
+    <%= f.text_area :eventImage_xpath %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
