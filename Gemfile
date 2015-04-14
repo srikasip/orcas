@@ -24,6 +24,8 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+gem 'bootstrap-sass', '~> 3.2.0'
+
 group :development do
   gem 'taps' #transfer data to and from databases in an agnostic fashion
   gem 'sqlite3', '1.3.8'

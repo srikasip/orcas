@@ -14,11 +14,16 @@ class EventsParsersController < ApplicationController
 
   # GET /events_parsers/new
   def new
+    agg_id = params[:event_agg_id]
+
     @events_parser = EventsParser.new
+    @events_parser.event_agg_id = agg_id
   end
 
   # GET /events_parsers/1/edit
   def edit
+    agg_id = params[:event_agg_id]
+
   end
 
   # POST /events_parsers

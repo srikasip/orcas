@@ -28,7 +28,10 @@ class EventAggsController < ApplicationController
 
     respond_to do |format|
       if @event_agg.save
-        format.html { redirect_to @event_agg, notice: 'Event agg was successfully created.' }
+        format.html { 
+          redirect_to :controller => 'events_parsers', :action => 'new', :event_agg_id => @event_agg.id,
+          notice: 'Event agg was successfully created.' 
+        }
         format.json { render action: 'show', status: :created, location: @event_agg }
       else
         format.html { render action: 'new' }
@@ -42,7 +45,10 @@ class EventAggsController < ApplicationController
   def update
     respond_to do |format|
       if @event_agg.update(event_agg_params)
-        format.html { redirect_to @event_agg, notice: 'Event agg was successfully updated.' }
+        format.html { 
+          redirect_to :controller => 'events_parsers', :action => 'new', :event_agg_id => @event_agg.id,
+          notice: 'Event agg was successfully created.' 
+        }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
